@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="backg">
+        <h2 class="txt">Magical Button.</h2>
+        <button id="btn">click me!</button>
+
+        <div class="waves wv1"></div>
+        <div class="waves wv2"></div>
+        <div class="waves wv3"></div>
+    </div>
+
+    <script>
+        let btn_el = document.querySelector("#btn");
+        let waves_1 = document.querySelector(".wv1");
+        let waves_2 = document.querySelector(".wv2");
+        let waves_3 = document.querySelector(".wv3");
+        btn_el.onclick = () =>{
+            setInterval(() => {
+                waves_1.classList.toggle('wave-active');    
+            }, 1000);
+            setInterval(() => {
+                waves_2.classList.toggle('wave-active');
+            }, 2000);
+            setInterval(() => {
+                waves_3.classList.toggle('wave-active');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
